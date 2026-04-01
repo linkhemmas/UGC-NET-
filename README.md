@@ -1,8 +1,14 @@
 # Welcome to UGC-NET Previous Papers
-Welcome to my study repository. Choose a year below to view the past papers.
+This list updates automatically whenever I add a new file to my folders!
 
-## 2017 Papers
-* [January 2017 - Paper 2](Papers2/2017/jan2017paper2.md)
-* [January 2017 - Paper 3](Papers2/2017/jan2017paper3.md)
-* [November 2017 - Paper 2](Papers2/2017/nov2017paper2.md)
-* [November 2017 - Paper 3](Papers2/2017/nov2017paper3.md)
+## All Available Papers:
+
+<ul>
+{% for page in site.pages %}
+  {% if page.name != 'README.md' and page.name != 'index.md' %}
+    <li>
+      <a href="{{ page.url | relative_url }}">{{ page.path }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
